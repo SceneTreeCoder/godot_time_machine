@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b14qewmgqfodb"]
+
+[ext_resource type="Script" uid="uid://putmj6ggatvm" path="res://script/hour_indicator.gd" id="1_bigor"]
+
+[node name="hour_indicator" type="Polygon2D" unique_id=1768168624]
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_bigor")

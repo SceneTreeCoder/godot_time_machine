@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://xey6fkdfwkb5"]
+
+[ext_resource type="Script" uid="uid://cajo8rp12si32" path="res://script/clockarm.gd" id="1_rufgg"]
+
+[node name="clockarm" type="Polygon2D" unique_id=398013776]
+script = ExtResource("1_rufgg")
+
+[node name="Timer" type="Timer" parent="." unique_id=409696111]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

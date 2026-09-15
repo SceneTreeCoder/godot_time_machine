@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bst06mk7lsd77"]
+
+[ext_resource type="Script" uid="uid://b2hqybtq14d0y" path="res://script/face.gd" id="1_fybr8"]
+[ext_resource type="PackedScene" uid="uid://xey6fkdfwkb5" path="res://scene/arrow.tscn" id="2_3eduw"]
+
+[sub_resource type="Gradient" id="Gradient_okknv"]
+offsets = PackedFloat32Array(0.98, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dgfsc"]
+gradient = SubResource("Gradient_okknv")
+width = 256
+height = 256
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Clock" type="Node2D" unique_id=1002826019]
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1244036180]
+
+[node name="Face" type="Sprite2D" parent="." unique_id=1904930236]
+texture = SubResource("GradientTexture2D_dgfsc")
+script = ExtResource("1_fybr8")
+R = 112.0
+
+[node name="clockarm_m" parent="." unique_id=398013776 instance=ExtResource("2_3eduw")]
+color = Color(0.08627451, 0, 0.45882353, 1)
+type = 1
+length = 120.0
+width = 8.0
+
+[node name="clockarm_h" parent="." unique_id=1714537867 instance=ExtResource("2_3eduw")]
+color = Color(0, 0, 0, 1)
+length = 84.0
+width = 13.0
+
+[node name="clockarm_s" parent="." unique_id=777272201 instance=ExtResource("2_3eduw")]
+color = Color(0.733002, 2.7554854e-06, 6.738305e-07, 1)
+type = 2
+width = 5.0
